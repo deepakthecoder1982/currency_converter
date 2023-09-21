@@ -1,0 +1,163 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --theme-color: #ece7e7e0;
+  --font-color: rgb(24, 20, 20);
+  --second-main-color: rgb(129, 28, 187);
+  --bg-gradient: linear-gradient(to left, white, hotpink);
+}
+body {
+  font-family: Poppins, sans-serif;
+  color: rgb(252, 249, 249);
+  background-image: url("https://wallpapercave.com/wp/wp2704825.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  width: 30%;
+  height: 100%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  margin: 5vw auto 5vw;
+  background-color: rgba(206, 204, 204, 0.623);
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.wrapper h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+/* .wrapper header::after {
+  content: "";
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 2rem ;
+  width:80%;
+  height: 1vh;
+  background-color: rgb(10, 188, 233);
+  box-shadow: rgba(242, 242, 255, 0.1) 0px 8px 24px, rgba(226, 226, 233, 0.1) 0px 16px 56px, rgba(243, 243, 243, 0.1) 0px 24px 80px;
+  margin: -2rem;
+} */
+.wrapper form {
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+}
+.wrapper form input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 90%;
+  border: 0.01rem solid rgba(26, 23, 23, 0.466);
+  outline: none;
+  font-size: 1.2em;
+  color: rgba(20, 19, 19, 0.966);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.wrapper form input:focus {
+  outline: .15rem solid rgba(5, 232, 248, 0.808);
+  box-shadow: rgba(3, 7, 22, 0.63) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.wrapper .converter {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.5rem;
+  padding-bottom: 15px;
+  align-items: center;
+}
+
+.wrapper .converter .children {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+  border: 0.1rem solid rgb(228, 223, 223);
+  display: flex;
+  width: 82%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+  border-radius: 8px;
+  background-color: white;
+}
+.wrapper .converter .children select {
+  border: none;
+  padding: 10px 0;
+  outline: none;
+  font-size: 1.01rem;
+  font-family: Poppins;
+}
+.wrapper .converter .children:hover {
+  border: 1px solid rgba(23, 152, 228, 0.589);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.wrapper .converter .children option {
+  border-radius: 10px;
+}
+.wrapper .converter .children img {
+  width: 30%;
+}
+.conversion_rate {
+  margin: 5px 15px;
+  /* text-decoration: underline; */
+  border-bottom: 2px solid cyan;
+  width: 60%;
+}
+.conversion_rate P{
+  width: 100%;
+}
+input[type="submit"] {
+  color: white;
+  font-size: 1.1rem;
+}
+#convert-btn {
+  margin: 1rem auto;
+  /* width: 70%; */
+  position: relative;
+  /* left: 2rem; */
+  background-color: rgba(61, 21, 221, 0.692);
+  color: whitesmoke;
+  box-shadow: inset;
+  cursor: pointer;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-bottom: 3px solid rgb(231, 233, 235);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+}
+#convert-btn:hover{
+  transform: scale(0.95);
+  box-shadow: rgba(0, 0, 0, 0.712) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+.switchingArrow {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  position: relative;
+  top: 0.7rem;
+  right: 0.7rem;
+}
+.switchingArrow:hover{
+  transform: scale(.90);
+  cursor: pointer;
+  color: rgb(20, 195, 248);
+}
