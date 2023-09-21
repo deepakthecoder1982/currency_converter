@@ -1,7 +1,7 @@
 let country_choice = document.querySelectorAll(".converter select");
 let country_image = document.querySelectorAll(".converter .children img");
 // require("dotenv").config();
-const APIkey = "apikey";
+// const APIkey = "5a485c84292e9954fa87da67";
 
 for (let i = 0; i < country_choice.length; i++) {
   for (currency_code in country_list) {
