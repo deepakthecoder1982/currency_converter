@@ -1,55 +1,55 @@
-# Welcome to Currency Converter 💱 💸 👓 🚀
+# Currency Converter Application 🚀 😎 💸
 
-## A Currency Converter Application for Windows applications build using Electron.js
+## Overview
 
-### This the starting page for currency converter 
+Currency Converter is a Windows desktop application built with Electron.js that allows you to convert over 100+ countries' currencies into different currencies. It offers a user-friendly interface and efficient currency conversion.
 
-![Alt text](image.png)
+## Screenshots
 
+### Home Page
+![Home Page](image.png)
 
-### You can convert over 100+ countries currency into different currencies 
+### Conversion Interface
+![Conversion Interface](image-1.png)
 
-![Alt text](image-1.png)
+## Getting Started
 
-### For getting the conversion of desired country currency you just need to select from the select tag and then 
-### to which country you want to convert. Also You can enter the amount of money you want to convert 
-** For example here I am converting 120 USd dollars to Bharat(before known as India) rupees.
+To run the Currency Converter application on your system, follow these steps:
 
-![Alt text](image-2.png)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/deepakthecoder1982/currency_converter.git
+   ```
 
-** You can see the output **
+2. Navigate to the project directory:
+   ```bash
+   cd currency_converter
+   ```
 
-### If you want to switch between the same country's in the options you can just click the switch icon between 
-### them and can switch between them in an second and convert accordingly. 
-**See the example below for more details. **
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-![Alt text](image-3.png)
+4. Start the application:
+   ```bash
+   npx electron .
+   ```
 
+## Usage
 
-## For Running it locally into Your system `#0969DA` 
-## Follow the Below Steps >
-```
-git clone https://github.com/deepakthecoder1982/currency_converter.git
+- Select the source and target currencies from the dropdown menus.
+- Enter the amount you want to convert.
+- Click the "Convert" button to get the converted amount.
+- To quickly switch between the same currencies, click the switch icon.
 
-<!-- Make sure that Node is installed in your system for running and working on this application -->
-<!-- Then For Running the application follow below steps -->
+## Feedback and Contact
 
-cd currency_converter
+If you have any feedback or questions or encounter any issues, feel free to reach out to me:
 
-npm install 
+- **LinkedIn:** [Deepak Yadav](https://www.linkedin.com/in/deepak-archana-mahesh-yadav/)
+- **Email:** deepakyad18@gmail.com
 
-npx electron .
+Thank you for using Currency Converter! Enjoy seamless currency conversion! 🌐💱
 
-<!-- Congratulations You have succesfully run the application in your system!! -->
-```
-
-## If you have anything to share with me or wanted to provide me any feedback, please feel free to connect with me over my linkdin account or email address. Also If you stuck somewhere don't hesitate to contact me at my email address below :- 
-`
-Linkedin Account :- https://www.linkedin.com/in/deepak-archana-mahesh-yadav/
-
-Email Address :- deepakyad18@gmail.com 
-`
-
-### Thank you for reading till this !! Have a great future ahead 
-
-# Keep Coding ! Keep Exploring !
+# Happy Coding! Keep Exploring!
