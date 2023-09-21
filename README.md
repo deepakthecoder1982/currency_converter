@@ -1,6 +1,6 @@
-# Welcome to Currency Converter 
+# Welcome to Currency Converter 💱 💸 👓 🚀
 
-## A Currency Converter Application for Window Applications build using Electron.js
+## A Currency Converter Application for Windows applications build using Electron.js
 
 ### This the starting page for currency converter 
 
