@@ -1,6 +1,7 @@
 let country_choice = document.querySelectorAll(".converter select");
 let country_image = document.querySelectorAll(".converter .children img");
-require("dotenv").config();
+// require("dotenv").config();
+
 for (let i = 0; i < country_choice.length; i++) {
   for (currency_code in country_list) {
     let options = `<option value="${country_list[currency_code]}">${currency_code}</option>`;
@@ -32,7 +33,7 @@ Converter_btn.addEventListener("click",async(e)=>{
       }
   }
     try {
-      let data = await fetch(`https://v6.exchangerate-api.com/v6/5d0672c83c93e54a5807d99e/latest/${fromConverter}`).then(res=>res.json())
+      let data = await fetch(`https://v6.exchangerate-api.com/v6/${APIkey}/latest/${fromConverter}`).then(res=>res.json())
       console.log(data)
       let toConverter = document.getElementById("toCountry").value;
       let amount = document.getElementById("amount").value;
@@ -43,8 +44,9 @@ Converter_btn.addEventListener("click",async(e)=>{
             break;
         }
     }
+    let final_converson =amount * data.conversion_rates[toConverter]
 
-      document.querySelector(".conversion_rate").innerHTML = `<p>${amount} ${fromConverter} = ${amount * data.conversion_rates[toConverter]} ${toConverter}</p>`
+      document.querySelector(".conversion_rate").innerHTML = `<p>${amount} ${fromConverter} = ${final_converson.toFixed(2)} ${toConverter}</p>`
       
     } catch (error) {
       console.log(error)
@@ -64,7 +66,7 @@ document.querySelector(".switchingArrow").addEventListener("click",async()=>{
   fromConverter.innerHTML = toHtml;
   toConverter.innerHTML = FromHtml;
 
-  let data = await fetch(`https://v6.exchangerate-api.com/v6/${proccess.env.APIKEY}/latest/${fromConverter.value}`).then(res=>res.json())
+  let data = await fetch(`https://v6.exchangerate-api.com/v6/${APIkey}/latest/${fromConverter.value}`).then(res=>res.json())
   console.log(data)
 
   document.querySelector(".conversion_rate").innerHTML = `<p>${amount} ${from_Converter} = ${amount * data.conversion_rates[to_Converter]} ${to_Converter}</p>`
