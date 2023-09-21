@@ -1,4 +1,4 @@
-# Welcome to Currency Converter 
+# Welcome to Currency Converter 💸 🚀 😎
 
 ## A Currency Converter Application for Window Applications build using Electron.js
 
