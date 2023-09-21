@@ -1,7 +1,7 @@
 let country_choice = document.querySelectorAll(".converter select");
 let country_image = document.querySelectorAll(".converter .children img");
 // require("dotenv").config();
-const APIkey = "5a485c84292e9954fa87da67";
+const APIkey = "apikey";
 
 for (let i = 0; i < country_choice.length; i++) {
   for (currency_code in country_list) {
@@ -67,6 +67,7 @@ Converter_btn.addEventListener("click", async (e) => {
 document
   .querySelector(".switchingArrow")
   .addEventListener("click", async () => {
+
     let fromConverter = document.querySelector(".from_converter .children");
     let toConverter = document.querySelector(".to_converter .children");
     let amount = document.getElementById("amount").value;
@@ -75,17 +76,32 @@ document
     let from_Converter = document.getElementById("fromCountry").value;
     let to_Converter = document.getElementById("toCountry").value;
 
-    fromConverter.innerHTML = toHtml;
+    fromConverter.innerHTML = toHtml; 
     toConverter.innerHTML = FromHtml;
 
+    for (let country_code in country_list) {
+      if (country_list[country_code] == from_Converter) {
+        from_Converter = country_code;
+        break;
+      }
+    }
+
     let data = await fetch(
-      `https://v6.exchangerate-api.com/v6/${APIkey}/latest/${fromConverter.value}`
+      `https://v6.exchangerate-api.com/v6/${APIkey}/latest/${from_Converter}`
     ).then((res) => res.json());
-    console.log(data);
+
+    
+    for (let country_code in country_list) {
+      if (country_list[country_code] == to_Converter) {
+        to_Converter = country_code;
+        break;
+      }
+    }
+    let final_converson = amount * data.conversion_rates[to_Converter];
 
     document.querySelector(
       ".conversion_rate"
-    ).innerHTML = `<p>${amount} ${from_Converter} = ${
-      amount * data.conversion_rates[to_Converter]
-    } ${to_Converter}</p>`;
+    ).innerHTML = `<p>${amount} ${from_Converter} = ${final_converson.toFixed(
+      2
+    )} ${to_Converter}</p>`;
   });
